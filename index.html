@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <center>
+        <h1>Регистрация</h1>
+        <form name="reg">
+            <input type="email" placeholder="Почта" name="email">
+            <input type="text" placeholder="Имя" name="name">
+            <input type="text" placeholder="Фамилия" name="surname">
+            <input type="password" placeholder="Пароль" name="password">
+            <button>Продолжить</button>
+        </form>
+        <span id="errmsg" style="color: red; opacity: 0; transition: .5s ease; " >something went wrong try again</span> <br>
+        <a href="./pages/login.html">Войти в аккаунт</a>
+    </center>
+
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>

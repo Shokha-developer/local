@@ -1,0 +1,17 @@
+.axmed {
+	width: 438px;
+	height: 56px;
+	background-color: rgb(0, 0, 255);
+	border-radius: 10px;
+	color: aliceblue;
+}
+
+.idk {
+	height: 56px;
+	width: 438px;
+	border-radius: 10px;
+}
+
+::placeholder {
+	font-weight: bolder;
+}
