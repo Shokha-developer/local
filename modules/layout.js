@@ -28,13 +28,16 @@ export function createHeader() {
         right_div.classList.add('right-side')
         link.classList.add('link')
         img.classList.add('img')
+        header.classList.add("header")
 
         home.innerHTML = item.home
         cards.innerHTML = item.cards
         transition.innerHTML = item.transition
         link.innerHTML = item.link
 
-        img.src = "../img/Vector (2).png"
+        img.src = "../public/icons/log-out (1) 1 (1).png"
+        img.style.marginLeft = "20px"
+        img.style.width = "25px"
 
         right_div.append(link, img)
         left_div.append(home, cards, transition)
@@ -51,6 +54,9 @@ export function createHeader() {
         }
         transition.onclick = () => {
             window.location = "../pages/allTransactions.html"
+        }
+        img.onclick = () => {
+            window.location = "../index.html"
         }
     }
 }

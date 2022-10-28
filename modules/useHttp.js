@@ -2,6 +2,7 @@ let BASEURL = "http://localhost:3500/"
 
 
 export const fetchAll = async (resource) => {
+    console.log(BASEURL + resource);
     const res = await fetch(BASEURL + resource)
 
     const data = res.json()

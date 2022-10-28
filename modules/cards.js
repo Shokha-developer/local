@@ -1,36 +1,15 @@
-export function cards(name1, currency) {
-    let arr = [
-        {
-            name: "Visa",
-            cur: "USD"
-        },
-        {
-            name: "Visa",
-            cur: "USD"
-        },
-        {
-            name: "Visa",
-            cur: "USD"
-        },
-        {
-            name: "Visa",
-            cur: "USD"
-        }
-    ]
-    
-    arr.push({name: name1, cur: currency })
-    
-    let main = document.querySelector(".div")
+export function cards(arr, place) {
+    place.innerHTML = ""
+
+    if(arr.length === 0) {
+        place.innerHTML = "У вас нет карточек"
+        return
+    }
     
     for (let item of arr) {
-        
-        console.log(item);
         let wallet = document.createElement("div")
         let walletType = document.createElement("span")
         let currency = document.createElement("span")
-        
-        wallet.append(walletType, currency)
-        main.append(wallet)
         
         wallet.classList.add("wallet")
         walletType.classList.add("walletType")
@@ -38,10 +17,9 @@ export function cards(name1, currency) {
         
         
         walletType.innerHTML = item.name
-        currency.innerHTML = item.cur
-        
-        
-    }
-    return arr;
+        currency.innerHTML = item.currency
 
+        wallet.append(walletType, currency)
+        place.append(wallet)
+    }
 }

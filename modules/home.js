@@ -1,10 +1,15 @@
 import { createHeader } from "./layout.js"
 import { cards } from "./cards.js"
 import { reload } from "./transactions.js"
+import { fetchAll } from "./useHttp.js"
+
+
+let tbody = document.querySelector('tbody')
+let div = document.querySelector('.div')
 
 let user = JSON.parse(localStorage.getItem('user'))
 
-    function welcomeTo(name, surname, email) {
+function welcomeTo(name, surname, email) {
     let h2 = document.createElement('h1')
     let a = document.createElement('a')
     let box = document.createElement('div')
@@ -21,16 +26,14 @@ welcomeTo(user.name, user.surname, user.email)
 
 
 
-
-reload()
-
-
+fetchAll('cards?userid=' + user.id)
+.then(res => cards(res, div))
 
 
 
-// let arr = [1, 2, 3, 4]
+fetchAll('transactions?userid=' + user.id)
+    .then(res => reload(res, tbody))
 
 
 
-cards()
 createHeader()

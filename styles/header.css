@@ -9,17 +9,18 @@
 header {
 	height: 40px;
 	max-width: 1760px;
-	background-color: rgb(224, 219, 219);
+	background-color: rgba(240, 240, 240, 1);
 	padding-left: 50px;
 	padding-right: 50px;
 	display: flex;
 	justify-content: space-between;
 }
 .left-side {
-	width: 500px;
+	width: 350px;
 	display: flex;
 	justify-content: space-between;
 	padding-top: 8px;
+	margin-left: 126px;
 }
 .right-side {
 	width: 210px;
@@ -27,6 +28,7 @@ header {
 	justify-content: space-between;
 	padding-top: 5px;
 	align-items: center;
+	margin-right: 158px;
 }
 .img {
 	width: 10px;
